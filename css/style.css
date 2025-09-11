@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #222;
+  line-height: 1.45;
+  background: #fafafa;
+}
+
+/****************   Nav Section **********************/
+nav {
+  background: linear-gradient(90deg,#2b2f77,#4b6cb7);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-right {
+  margin-left: auto;
+}
+
+.nav-right a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.08);
+}
+
+/***********************  Footer Section   **************************/
+footer {
+  background: #222;
+  color: #eee;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*********** Splash Page ************************/
+header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, rgba(75,108,183,0.08), transparent);
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  color: #233668;
+  margin: 0 0 0.25rem 0;
+}
+
+header img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.address {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.25rem 0 0;
+}
+
+.tagline {
+  margin: 0;
+  font-weight: 600;
+  color: #5167a6;
+}
+
+/************* Sections ********************/
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1.2rem 0;
+}
+
+section h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2b3a8c;
+  margin: 0 0 0.6rem 0;
+}
+
+section dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.25rem 1rem;
+  margin: 0 0 1rem 0;
+}
+
+section ul {
+  padding-left: 1.1rem;
+  margin: 0 0 1rem 0;
+}
+
+section a {
+  color: #2b3a8c;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+  color: #1a2456;
+}
+
+/**************   Projects   *****************/
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: start;
+  margin: 1rem 0 2rem 0;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.card {
+  background: #fff;
+  padding: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(46,61,73,0.08);
+  border: 1px solid rgba(20,30,60,0.04);
+}
+
+/**************   Responsiveness   *****************/
+@media (max-width: 680px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.4rem;
+      padding: 0.8rem 1rem;
+    }
+
+    .three-col {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 1rem;
+    }
+}
+
+/**************   Contact Page   *****************/
+.one-col {
+  max-width: 720px;
+  margin: 1.2rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d0d7e6;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d0d7e6;
+  border-radius: 6px;
+  font-size: 1rem;
+}
