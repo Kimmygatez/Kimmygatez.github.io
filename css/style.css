@@ -1,14 +1,36 @@
+:root{
+  --brand-1: #2b2f77;
+  --brand-2: #4b6cb7;
+  --accent: #2b3a8c;
+  --muted: #555;
+  --card-bg: #fff;
+  --page-bg: #fafafa;
+  --container-width: 1000px;
+}
+
+/* Global box model */
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   color: #222;
   line-height: 1.45;
-  background: #fafafa;
+  background: var(--page-bg);
+}
+
+/* Centering container (applies to main) */
+main {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /****************   Nav Section **********************/
 nav {
-  background: linear-gradient(90deg,#2b2f77,#4b6cb7);
+  background: linear-gradient(90deg,var(--brand-1),var(--brand-2));
   color: #fff;
   padding: 0.6rem 1rem;
   display: flex;
@@ -34,6 +56,25 @@ nav {
   background: rgba(255,255,255,0.08);
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  background: #fff;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
 /***********************  Footer Section   **************************/
 footer {
   background: #222;
@@ -47,11 +88,8 @@ footer {
 
 /*********** Splash Page ************************/
 header {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  padding: 2rem 1rem;
   background: linear-gradient(180deg, rgba(75,108,183,0.08), transparent);
+  padding: 2rem 0; /* vertical spacing; inner container will center content */
 }
 
 header h1 {
@@ -80,6 +118,33 @@ header img {
   margin: 0;
   font-weight: 600;
   color: #5167a6;
+}
+
+/* Inner header container uses the same centering as main */
+.header-inner {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 680px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .header-inner .headshot { align-self: center; }
+}
+
+/* Nav link hover/focus */
+.nav-right a:hover {
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+}
+.nav-right a:focus {
+  outline: 3px solid rgba(75,108,183,0.18);
+  outline-offset: 2px;
 }
 
 /************* Sections ********************/
@@ -143,6 +208,18 @@ section a:hover {
   border: 1px solid rgba(20,30,60,0.04);
 }
 
+/* Card hover/interactive polish */
+.card {
+  transition: transform .22s ease, box-shadow .22s ease;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover, .card:focus-within {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(46,61,73,0.14);
+  }
+}
+
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
     nav {
@@ -170,6 +247,20 @@ section a:hover {
   flex-direction: column;
   gap: 0.6rem;
 }
+
+.one-col label { display:block; margin-bottom: .25rem; font-weight:600; }
+input, textarea, button { width:100%; box-sizing: border-box; }
+input:focus, textarea:focus { outline: 3px solid rgba(75,108,183,0.18); outline-offset: 2px; }
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  padding: .6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Skills two-column already added; small screens collapse handled below */
 
 input {
   padding: 0.6rem 0.8rem;

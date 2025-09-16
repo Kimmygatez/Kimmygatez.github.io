@@ -10,23 +10,26 @@
       <title>Justin Kim</title>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
       <nav>
         <div class="nav-left">Justin Kim</div>
         <div class="nav-right"><a href="contact.html">Contact</a></div>
       </nav>
 
       <header>
-        <div class="splash-left">
-          <h1>Justin Kim</h1>
-          <p class="tagline">Backend developer &amp; Software engineer</p>
-          <p class="address">Athens, GA • (404) 345-6787 • jjk43091@uga.edu</p>
-        </div>
-        <div class="splash-right">
-          <img class="headshot" src="images/picture.jfif" alt="Justin Kim headshot" />
+        <div class="header-inner">
+          <div class="splash-left">
+            <h1>Justin Kim</h1>
+            <p class="tagline">Backend developer &amp; Software engineer</p>
+            <p class="address">Athens, GA • (404) 345-6787 • jjk43091@uga.edu</p>
+          </div>
+          <div class="splash-right">
+            <img class="headshot" src="images/picture.jfif" alt="Justin Kim headshot" />
+          </div>
         </div>
       </header>
 
-      <main>
+  <main id="main">
         <section id="education">
           <h3>Education</h3>
           <dl>
@@ -65,7 +68,7 @@
         <section id="experience">
           <h3>Experience</h3>
           <dl>
-            <dt><a href="https://acm-uga.github.io/">Member of Association for Computing Machinery (ACM): UGA Chapter</a></dt>
+            <dt><a href="https://acm-uga.github.io/" target="_blank" rel="noopener noreferrer">Member of Association for Computing Machinery (ACM): UGA Chapter</a></dt>
             <dd>2023-Present</dd>
             <dd>
               <ul>
@@ -79,8 +82,8 @@
         <section id="projects">
           <h3>Projects</h3>
           <div class="three-col">
-            <div class="card">
-              <img src="images/api.jpg" alt="Country Language Finder screenshot" />
+        <div class="card">
+          <img src="images/api.jpg" alt="Country Language Finder screenshot" loading="lazy" />
               <h4><a href="#">Country Language Finder (2025)</a></h4>
               <p>Developed an intuitive JavaFX application that integrates multiple external RESTful JSON APIs to provide information.</p>
               <ul>
@@ -89,7 +92,7 @@
               </ul>
             </div>
             <div class="card">
-              <img src="images/bash.png" alt="Custom Bash Shell screenshot" />
+              <img src="images/bash.png" alt="Custom Bash Shell screenshot" loading="lazy" />
               <h4><a href="#">Custom Bash Shell (2024)</a></h4>
               <p>Designed and implemented a custom Bash shell written in C to provide a lightweight command-line environment.</p>
               <ul>
@@ -98,7 +101,7 @@
               </ul>
             </div>
             <div class="card">
-              <img src="images/mysql.png" alt="Drone Dispatch screenshot" />
+              <img src="images/mysql.png" alt="Drone Dispatch screenshot" loading="lazy" />
               <h4><a href="#">MySQL Database Application (2024)</a></h4>
               <p>Designed a Django database application using a MySQL database to manage drone deliveries as part of a 4-person team.</p>
               <ul>
@@ -111,7 +114,7 @@
       </main>
 
       <footer>
-        <p>© Justin Kim — <a href="contact.html">Contact</a></p>
+        <p>© Justin Kim - <a href="contact.html">Contact</a></p>
       </footer>
   
   </body>
